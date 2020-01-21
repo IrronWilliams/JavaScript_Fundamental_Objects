@@ -21,9 +21,9 @@ function Car(brand, model) {
   }
 
 //initialize new object using 'new' keyword before function with capital letter.
-let myCar = new Car('Ford', 'Fiesta')  
-myCar.brand //'Ford'
-myCar.model //'Fiesta'
+let myCar = new Car('Toyota', 'Camry')  
+console.log(myCar.brand) 
+console.log(myCar.model) 
 
 /* Objects have properties. Every property has a name and a value. Can think of an object as a map, or dictionary, 
 or data structure.  The value of a property can be of any type, can even be an object, as objects can nest other 
@@ -35,21 +35,19 @@ Objects can inherit their properties from other objects.
 
 Objects are always passed by reference.
 
-
-
 */
 
 //If you assign a variable the same value of another, if it’s a primitive type like a number or a string, 
 //they are passed by value. 
-let age = 36
+let age = 45
 let myAge = age
-myAge = 37
-age //will return 36
+myAge = 38
+console.log(age) //will return value of variable age.  changing value for variable myAge will not change variable age
 
 let car = {
     color: 'blue'
   }
   let anotherCar = car
   anotherCar.color = 'yellow'
-  car.color //'yellow' because anotherCar passed value to car. although blue is value of property, blue was not passed. 
+  console.log(car.color) //'yellow' because anotherCar passed value to car. although blue is value of property, blue was not passed. 
   
