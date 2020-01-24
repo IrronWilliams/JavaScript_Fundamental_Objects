@@ -1,4 +1,56 @@
-/* There are multiple ways to define an object:
+/* Objects are similar to arrays, except that instead of using indexes to access and modify their data, 
+you access the data in objects through what are called properties.
+
+Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
+
+var cat = {
+  "name": "Whiskers",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Dogs"]
+};
+
+In this example, all the properties are stored as strings, such as - "name", "legs", and "tails". However, you 
+can also use numbers as properties. You can even omit the quotes for single-word string properties, as follows.
+However, if your object has any non-string properties, JavaScript will automatically typecast them as strings.
+
+var anotherObject = {
+  make: "Ford",
+  5: "five",
+  "model": "focus"
+};
+
+There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to 
+an array. Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+
+Here is a sample of using dot notation (.) to read an object's property:
+
+var myObj = {
+  prop1: "val1",
+  prop2: "val2"
+};
+var prop1val = myObj.prop1; // val1
+var prop2val = myObj.prop2; // val2
+
+If the property of the object you are trying to access has a space in its name, you will need to use bracket 
+notation. However, you can still use bracket notation on object properties without spaces.
+
+Here is a sample of using bracket notation to read an object's property. Property names with spaces in them must 
+be in quotes (single or double).
+
+var myObj = {
+  "Space Name": "Kirk",
+  "More Space": "Spock",
+  "NoSpace": "USS Enterprise"
+};
+myObj["Space Name"]; // Kirk
+myObj['More Space']; // Spock
+myObj["NoSpace"];    // USS Enterprise
+
+
+
+
+There are multiple ways to define an object:
 
 Object literal syntax: let car {}
 
