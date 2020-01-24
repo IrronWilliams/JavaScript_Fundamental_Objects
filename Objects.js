@@ -47,7 +47,55 @@ myObj["Space Name"]; // Kirk
 myObj['More Space']; // Spock
 myObj["NoSpace"];    // USS Enterprise
 
+Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle 
+flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, 
+and objects.
 
+Here's an example of a complex data structure.  This is an array which contains one object inside. The object has 
+various pieces of metadata about an album. It also has a nested "formats" array. If you want to add more album 
+records, you can do this by adding records to the top level array. Objects hold data in a property, which has a 
+key-value format. In example, "artist": "Daft Punk" is a property that has a key of "artist" and a value of 
+"Daft Punk"
+
+var ourMusic = [
+  {
+    "artist": "Daft Punk",
+    "title": "Homework",
+    "release_year": 1997,
+    "formats": [ 
+      "CD", 
+      "Cassette", 
+      "LP"
+    ],
+    "gold": true
+  }
+];
+
+Objects can contain both nested objects and nested arrays. Similar to accessing nested objects, Array bracket 
+notation can be chained to access nested arrays.
+
+Here is an example of how to access a nested array:
+
+var ourPets = [
+  {
+    animalType: "cat",
+    names: [
+      "Meowzer",
+      "Fluffy",
+      "Kit-Cat"
+    ]
+  },
+  {
+    animalType: "dog",
+    names: [
+      "Spot",
+      "Bowser",
+      "Frankie"
+    ]
+  }  
+];
+ourPets[0].names[1]; // "Fluffy"
+ourPets[1].names[0]; // "Spot"
 
 
 There are multiple ways to define an object:

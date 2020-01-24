@@ -13,7 +13,21 @@ You set the value of a property when you define the object.
 let car = {'the color': 'blue',
             color: blue}
 
-Attempting to access an nonexisting property results in an undefined error.  
+Attempting to access an nonexisting property results in an undefined error. 
+
+Sometimes it is useful to check if the property of a given object exists or not. We can use the 
+.hasOwnProperty(propname) method of objects to determine if that object has the given property name. 
+.hasOwnProperty() returns true or false if the property is found or not.
+
+Example
+
+var myObj = {
+  top: "hat",
+  bottom: "pants"
+};
+myObj.hasOwnProperty("top");    // true
+myObj.hasOwnProperty("middle"); // false
+
 */
 
 //2 different syntaxes can be used to retrieve value of a property, dot notation and square brackets
